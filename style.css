@@ -13,6 +13,10 @@
     display: none;
 }
 
+html{
+    width: 100vw;
+}
+
 /* Center content vertically and horizontally, apply uppercase text, and set background image */
 body {
     display: flex;
@@ -249,6 +253,7 @@ footer {
     justify-content: space-between;
     margin: 2rem 0;
     padding: 0.6rem 0;
+    flex-wrap: wrap;
 }
 
 /* Footer logo with black background and circular arrow icon */
@@ -308,4 +313,63 @@ footer #social-media img {
     aspect-ratio: 1/1;
     object-fit: contain;
     cursor: pointer;
+}
+
+@media screen and (max-width: 425px){
+    .logo{
+        max-width: 9rem;
+        min-width: 1rem;
+        max-height: 9rem;
+        min-height: 2rem;
+    }
+
+    nav ul{
+        width: 65%;
+    }
+
+    nav ul li a{
+        font-size: clamp(0.9rem,4vw,1.4rem);
+    }
+
+    #main article header h1{
+        font-size: 2.5rem;
+    }
+
+    #main article #select {
+        max-width: 30rem;
+        min-width: 1rem;
+        padding: 1.5rem;
+    }
+
+    #main article #select .arrow{
+        max-width: 1rem;
+        min-width: 0.5rem;
+        max-height: 1rem;
+        min-height: 0.5rem;
+    }
+
+    #main article #select #items{
+        gap: 0.2rem;
+        padding: 0 0.2rem;
+    }
+
+    #main article #select #items #item-1, #main article #select #items #item-3 {
+        max-width: 3rem;
+        min-width: 0.2rem;
+    }
+
+    #main article #select #items #item-2{
+        max-width: 5rem;
+        min-width: 0.3rem;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    footer #social-media{
+        margin: 0;
+    }
 }
